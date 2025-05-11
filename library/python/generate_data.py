@@ -66,10 +66,12 @@ def generate_linear_regression_data(
             off_diag_indices = np.triu_indices(K, k=1)
             avg_off_diag_corr = np.mean(sample_corr_matrix[off_diag_indices])
             print(f"Target Predictor Correlation: {target_correlation:.2f}")
-            print(f"Average Sample Off-Diagonal Predictor Correlation: {avg_off_diag_corr:.2f}")
-        elif K == 2 :
-             print(f"Target Predictor Correlation: {target_correlation:.2f}")
-             print(f"Sample Predictor Correlation: {sample_corr_matrix[0,1]:.2f}")
+            print(
+                f"Average Sample Off-Diagonal Predictor Correlation: {avg_off_diag_corr:.2f}"
+            )
+        elif K == 2:
+            print(f"Target Predictor Correlation: {target_correlation:.2f}")
+            print(f"Sample Predictor Correlation: {sample_corr_matrix[0,1]:.2f}")
 
     print("----------------------------------------\n")
 
